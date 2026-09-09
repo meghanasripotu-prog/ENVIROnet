@@ -1,0 +1,745 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #07111f;
+
+    color: #e8f1ff;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+    height: 65px;
+
+    background: #0b1728;
+
+    border-bottom:
+        1px solid #1d3552;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+}
+
+
+.system-status {
+
+    color: #2fd980;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   MAIN
+   (left panel removed — center panel now takes the space
+   the left panel used to occupy)
+========================================================= */
+
+main {
+
+    display: grid;
+
+    grid-template-columns:
+        75% 25%;
+
+    width: 100%;
+
+    height: calc(100vh - 65px);
+
+    gap: 0;
+
+    background: #1b3048;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PANELS
+========================================================= */
+
+.center-panel,
+.right-panel {
+
+    background: #091522;
+
+    padding: 15px;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+.center-panel h2,
+.right-panel h2 {
+
+    margin-top: 0;
+
+    color: #f2f7ff;
+
+}
+
+
+
+/* =========================================================
+   MAIN MAP
+   (taller now that it has the full-width panel to itself)
+========================================================= */
+
+#mainMap {
+
+    width: 100%;
+
+    height: 70vh;
+
+    min-height: 480px;
+
+    border:
+        1px solid #203b59;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================================================
+   LOCATION BAR
+========================================================= */
+
+.location-bar {
+
+    margin-bottom: 10px;
+
+}
+
+
+.location-bar label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #a9bed5;
+
+}
+
+
+.location-search {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.location-search input {
+
+    flex: 1;
+
+    padding: 11px 13px;
+
+    border:
+        1px solid #294866;
+
+    border-radius: 5px;
+
+    background: #0d1d30;
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.location-search input:focus {
+
+    border-color: #22d3ee;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(34,211,238,0.15);
+
+}
+
+
+.location-search button {
+
+    padding:
+        10px 16px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #0e93ad;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.location-search button:hover {
+
+    background: #22d3ee;
+
+    color: #03151a;
+
+}
+
+
+
+/* =========================================================
+   SEARCH STATUS
+========================================================= */
+
+.search-status {
+
+    min-height: 22px;
+
+    margin-bottom: 5px;
+
+    font-size: 13px;
+
+    color: #8fa9c4;
+
+}
+
+
+.search-status.success {
+
+    color: #2fd980;
+
+}
+
+
+.search-status.error {
+
+    color: #ff6b6b;
+
+}
+
+
+.search-status.loading {
+
+    color: #ffb020;
+
+}
+
+
+
+/* =========================================================
+   HAZARD FILTER
+========================================================= */
+
+.hazard {
+
+    background: #0d1d30;
+
+    border:
+        1px solid #203b59;
+
+    padding: 13px;
+
+    margin-bottom: 8px;
+
+    border-radius: 5px;
+
+}
+
+
+.hazard label {
+
+    cursor: pointer;
+
+}
+
+
+.hazard input {
+
+    accent-color: #22d3ee;
+
+    margin-right: 7px;
+
+}
+
+
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.alerts {
+
+    margin-top: 25px;
+
+    padding-top: 10px;
+
+    border-top:
+        1px solid #203b59;
+
+}
+
+
+.alert {
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+}
+
+
+.alert.high {
+
+    background:
+        rgba(255,77,94,0.12);
+
+    border-left:
+        4px solid #ff4d5e;
+
+}
+
+
+.alert.medium {
+
+    background:
+        rgba(255,176,32,0.12);
+
+    border-left:
+        4px solid #ffb020;
+
+}
+
+
+.alert.low {
+
+    background:
+        rgba(255,193,7,0.12);
+
+    border-left:
+        4px solid #ffc107;
+
+}
+
+
+
+/* =========================================================
+   NODE INFORMATION
+========================================================= */
+
+.node-information {
+
+    margin-top: 15px;
+
+    background: #0c1a2a;
+
+    border:
+        1px solid #1c3854;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+}
+
+
+.node-information h2 {
+
+    font-size: 17px;
+
+}
+
+
+.node-card {
+
+    background: #0b1827;
+
+    border:
+        1px solid #25415e;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+}
+
+
+.node-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+
+}
+
+
+.node-location {
+
+    color: #9db4cc;
+
+}
+
+
+.node-card hr {
+
+    border: none;
+
+    border-top:
+        1px solid #203b59;
+
+    margin:
+        13px 0;
+
+}
+
+
+.node-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.node-grid div {
+
+    background: #102236;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    color: #8fa9c4;
+
+}
+
+
+.node-grid strong {
+
+    display: block;
+
+    color: #ffffff;
+
+    margin-top: 5px;
+
+}
+
+
+.node-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    color: #9db4cc;
+
+}
+
+
+.node-footer strong {
+
+    color: #ffffff;
+
+}
+
+
+.hazard-tags {
+
+    margin-top: 12px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+}
+
+
+.hazard-tags span {
+
+    padding:
+        5px 9px;
+
+    border-radius: 12px;
+
+    background: #123452;
+
+    color: #6fe3ff;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+   LIVE NODE (ESP32-S3)
+========================================================= */
+
+.live-tag {
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    padding: 3px 9px;
+
+    border-radius: 12px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    background: rgba(47,217,128,0.15);
+
+    color: #2fd980;
+
+    vertical-align: middle;
+
+    animation: livePulse 1.6s infinite;
+
+}
+
+
+@keyframes livePulse {
+
+    0%   { opacity: 1;   }
+    50%  { opacity: 0.55; }
+    100% { opacity: 1;   }
+
+}
+
+
+.demo-tag {
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    padding: 3px 9px;
+
+    border-radius: 12px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    background: rgba(34,211,238,0.15);
+
+    color: #22d3ee;
+
+    vertical-align: middle;
+
+}
+
+
+.live-panel {
+
+    margin-top: 4px;
+
+}
+
+
+.live-reason {
+
+    font-size: 13px;
+
+    color: #a9bed5;
+
+    margin-bottom: 10px;
+
+    line-height: 1.4;
+
+}
+
+
+.live-graph-label {
+
+    font-size: 11px;
+
+    color: #8fa9c4;
+
+    margin-bottom: 6px;
+
+}
+
+
+#liveTrendCanvas {
+
+    width: 100%;
+
+    height: 90px;
+
+    background: #0d1d30;
+
+    border: 1px solid #203b59;
+
+    border-radius: 5px;
+
+}
+
+
+
+/* =========================================================
+   LEAFLET
+========================================================= */
+
+.leaflet-container {
+
+    background: #07111f;
+
+}
+
+
+.leaflet-control-zoom a {
+
+    background: #0c1a2a !important;
+
+    color: #ffffff !important;
+
+    border-color: #294866 !important;
+
+}
+
+
+.leaflet-control-attribution {
+
+    background:
+        rgba(5,13,23,0.85) !important;
+
+    color: #9db4cc !important;
+
+}
+
+
+.leaflet-control-attribution a {
+
+    color: #6fe3ff !important;
+
+}
+
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+
+    background: #0b1827;
+
+    color: #ffffff;
+
+}
+
+
+.leaflet-tooltip {
+
+    background: #071522;
+
+    color: #ffffff;
+
+    border:
+        1px solid #294866;
+
+}
+
+
+.leaflet-tooltip-top:before {
+
+    border-top-color: #294866;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    main {
+
+        grid-template-columns:
+            1fr;
+
+        height: auto;
+
+    }
+
+    #mainMap {
+
+        height: 450px;
+
+    }
+
+}

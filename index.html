@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Environmental Intelligence Network
+    </title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Your CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="logo">
+            🌍 Environmental Intelligence Network
+        </div>
+
+        <div class="system-status">
+            🟢 SYSTEM ONLINE
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTAINER
+         (left panel / India Overview removed — center panel
+         now fills that space)
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             CENTER PANEL
+        ================================================== -->
+
+        <section class="center-panel">
+
+
+            <h2>
+                📍 Environmental Monitoring Map
+            </h2>
+
+
+
+            <!-- LOCATION SEARCH -->
+
+            <div class="location-bar">
+
+                <label for="locationSearch">
+
+                    Select Location:
+
+                </label>
+
+
+                <div class="location-search">
+
+                    <input
+                        type="text"
+                        id="locationSearch"
+                        placeholder="Search any place in India..."
+                    >
+
+
+                    <button
+                        id="searchLocationBtn"
+                    >
+                        🔍 Search
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH RESULT MESSAGE -->
+
+            <div
+                id="searchStatus"
+                class="search-status"
+            >
+            </div>
+
+
+
+            <!-- MAIN MAP -->
+
+            <div id="mainMap"></div>
+
+
+
+            <!-- NODE INFORMATION -->
+
+            <div class="node-information">
+
+                <h2>
+                    📡 Sensor Node Information
+                </h2>
+
+
+                <div id="nodeDetails">
+
+                    <p>
+                        Click on a sensor node on the map
+                        to see its information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RIGHT PANEL
+        ================================================== -->
+
+        <section class="right-panel">
+
+
+            <h2>
+                ⚠️ Hazard Filters
+            </h2>
+
+
+            <p class="filter-description">
+
+                Select one or more environmental hazards.
+
+            </p>
+
+
+
+            <!-- FLOOD -->
+
+            <div class="hazard">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="hazardFilter"
+                        value="Flood"
+                    >
+
+                    🌊 Flood
+
+                </label>
+
+            </div>
+
+
+
+            <!-- FOREST FIRE -->
+
+            <div class="hazard">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="hazardFilter"
+                        value="Fire"
+                    >
+
+                    🔥 Forest Fire
+
+                </label>
+
+            </div>
+
+
+
+            <!-- POLLUTION -->
+
+            <div class="hazard">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="hazardFilter"
+                        value="Pollution"
+                    >
+
+                    🌫 Air Pollution
+
+                </label>
+
+            </div>
+
+
+
+            <!-- HEAT -->
+
+            <div class="hazard">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="hazardFilter"
+                        value="Heat"
+                    >
+
+                    🌡 Heat Wave
+
+                </label>
+
+            </div>
+
+
+
+            <!-- LANDSLIDE -->
+
+            <div class="hazard">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="hazardFilter"
+                        value="Landslide"
+                    >
+
+                    ⛰ Landslide
+
+                </label>
+
+            </div>
+
+
+
+            <!-- CHEMICAL -->
+
+            <div class="hazard">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="hazardFilter"
+                        value="Chemical"
+                    >
+
+                    🏭 Chemical Leak
+
+                </label>
+
+            </div>
+
+
+
+            <!-- ACTIVE ALERTS -->
+
+            <div class="alerts">
+
+                <h2>
+                    🚨 Active Alerts
+                </h2>
+
+
+                <div class="alert high">
+
+                    🔴 2 High Risk
+
+                </div>
+
+
+                <div class="alert medium">
+
+                    🟠 3 Warning
+
+                </div>
+
+
+                <div class="alert low">
+
+                    🟡 5 Low Risk
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         LEAFLET JS
+    ====================================================== -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+    <!-- =====================================================
+         YOUR JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@ Built by **Team AURA**.
 🔗 **Live dashboard:** https://enviro-netrep.onrender.com
 *(Hosted on Render's free tier, so the first load may take up to a minute.)*
 
-🎥 **Demo video:** [add link]
+🎥 **Demo video:**https://drive.google.com/drive/folders/1xf7R-QhSi6CpGNrOdPlTFbqOB1HnU02x
 
 ---
 

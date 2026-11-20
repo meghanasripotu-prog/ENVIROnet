@@ -120,14 +120,3 @@ environet/
 | Local pilot (15 nodes, 2 gateways) | ~1.8 lakh |
 
 *Estimates based on small-batch retail prices in India. Replace with your actual parts cost.*
-
-## Team AURA
-
-| Name | Role |
-|---|---|
-| [add] | [add] |
-| [add] | [add] |
-
-## License
-
-[Add a license, for example MIT]

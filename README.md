@@ -77,40 +77,6 @@ flowchart TD
 - **Backend:** REST APIs
 - **AI (planned):** TinyML on nodes, anomaly detection and hazard correlation at the gateway
 
-## Repository structure
-
-```
-[update to match your repo]
-environet/
-├── firmware/      # Node and gateway code
-├── dashboard/     # Web dashboard
-├── backend/       # API server
-├── hardware/      # Wiring diagrams, parts list
-└── docs/          # Concept document, images
-```
-
-## Getting started
-
-### Hardware
-[Add your parts list and wiring diagram, or link to `hardware/`]
-
-### Firmware
-```bash
-# [Add your steps, for example:]
-# 1. Open firmware/ in Arduino IDE or PlatformIO
-# 2. Set your LoRa frequency and node ID
-# 3. Flash to the ESP32
-```
-
-### Dashboard
-```bash
-# [Add your steps, for example:]
-# git clone <repo-url>
-# cd environet/dashboard
-# npm install
-# npm start
-```
-
 ## Estimated cost
 
 | Item | Approx. cost (₹) |
